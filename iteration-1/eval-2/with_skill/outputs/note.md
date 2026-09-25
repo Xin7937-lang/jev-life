@@ -1,0 +1,4 @@
+- skill triggered? yes (loaded `jev-life` via Skill tool, SKILL.md content was injected and applied)
+- attempted API call? no (TYPESAFE_API confirmed not set in env before writing response; refused per skill's failure-handling row "`TYPESAFE_API` 未设置 → 拒绝运行，告知需在环境变量中配置 API Key")
+- refusal path executed cleanly? yes — response (a) states the env var is missing, (b) lists concrete remediation steps the user can take, (c) does not fabricate probabilities or fall back to heuristic advice, (d) briefly notes what Step 1 would have asked for if the key had been present, so the user understands the workflow they are blocked on, (e) offers the non-Jev conversational fallback as an explicit option rather than slipping into one
+- length: ~260 Chinese characters, well under the 400-word cap

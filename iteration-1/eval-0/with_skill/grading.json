@@ -1,0 +1,36 @@
+{
+  "run_id": "eval-0-with_skill",
+  "eval_name": "career-offer-decision",
+  "expectations": [
+    {
+      "text": "Skill triggers on a clear life-scenario prompt (career trade-off)",
+      "passed": true,
+      "evidence": "response.md opens with '你这个 offer vs 现状的取舍，正是 jev-life 想要结构化判断的典型场景', confirming skill loaded and recognized the scenario."
+    },
+    {
+      "text": "Verifies TYPESAFE_API is actually unset rather than assuming",
+      "passed": true,
+      "evidence": "response.md says '我检查了进程环境变量，TYPESAFE_API 没有设置'; note.md confirms `[ -z \"$TYPESAFE_API\" ]` check ran."
+    },
+    {
+      "text": "Refuses to fabricate probabilities when key missing",
+      "passed": true,
+      "evidence": "No Choice/Noul/Score values appear. Explicit statement: '如果我现在凭印象给你写一个...那就违背了 jev-life 存在的理由——它的可信度来自 Jev 的判断，不是我的判断'."
+    },
+    {
+      "text": "Refusal is actionable — tells user how to enable the skill",
+      "passed": true,
+      "evidence": "Lists export commands for macOS/Linux/PowerShell/cmd, plus restart instruction."
+    },
+    {
+      "text": "Outlines the 4-step workflow that will run once the key is configured",
+      "passed": true,
+      "evidence": "Steps 1-4 are enumerated: collect background/actual → build 3-6 candidates → POST with three question_ids → present raw probabilities + interpretations."
+    },
+    {
+      "text": "Respects user autonomy — does not make the final decision for the user",
+      "passed": true,
+      "evidence": "'最终拍板交回给你' explicit. Also refuses to give heuristic advice in lieu of Jev judgment."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "run_id": "eval-2-with_skill",
+  "eval_name": "roommate-conflict-handling",
+  "expectations": [
+    {
+      "text": "Skill triggers on interpersonal life scenario",
+      "passed": true,
+      "evidence": "note.md: 'Skill triggered correctly'. response.md addresses the roommate-bowl scenario explicitly."
+    },
+    {
+      "text": "Refuses cleanly without falling back to heuristics",
+      "passed": true,
+      "evidence": "'我不会降级到本地启发式、不会编造概率——那不是 jev-life 在工作，那是普通聊天建议'."
+    },
+    {
+      "text": "Lists concrete setup checks (export, .env, .claude/.env, balance, expiry)",
+      "passed": true,
+      "evidence": "Three bullet points: shell export, .env / .claude/.env loading, key validity checks."
+    },
+    {
+      "text": "Previews Step 1 fields the user has not supplied (background)",
+      "passed": true,
+      "evidence": "Asks for 合租环境、你和室友的关系、碗堆久了会怎样、他是怎么回应的. Demonstrates the skill's input requirements without inventing them."
+    },
+    {
+      "text": "Offers a non-Jev conversational option as an explicit choice",
+      "passed": true,
+      "evidence": "'如果你想现在就用别的方式聊聊这个室友问题（不带概率、不挂 Jev），告诉我，我可以单纯作为对话伙伴聊' — does not slip into advice mode."
+    },
+    {
+      "text": "Word count under cap (≤400 Chinese chars in body)",
+      "passed": true,
+      "evidence": "note.md: 'length ~260 Chinese chars, well under the 400-word cap'."
+    }
+  ]
+}
