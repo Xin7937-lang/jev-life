@@ -51,7 +51,7 @@ $env:TYPESAFE_API_KEY = "<你的 typesafe API key>"
 也可以写到 `~/.claude/.env` 里让所有会话自动加载：
 
 ```
-TYPESAFE_API_KEY=tsk_...
+TYPESAFE_API_KEY=apikey_...
 ```
 
 **3. 重启 Claude Code 让配置生效**
